@@ -1,0 +1,169 @@
+{
+  "stats": {
+    "suites": 2,
+    "tests": 3,
+    "passes": 1,
+    "pending": 0,
+    "failures": 2,
+    "start": "2024-06-27T03:04:07.055Z",
+    "end": "2024-06-27T03:04:26.383Z",
+    "duration": 19328,
+    "testsRegistered": 3,
+    "passPercent": 33.33333333333333,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "8fe04c5b-0102-4be5-96c9-1b829ad6b4cf",
+      "title": "",
+      "fullFile": "cypress\\e2e\\sub-dir\\test1.cy.js",
+      "file": "cypress\\e2e\\sub-dir\\test1.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [
+        {
+          "title": "fail test #tag1",
+          "fullTitle": "fail test #tag1",
+          "timedOut": null,
+          "duration": 4636,
+          "state": "failed",
+          "speed": null,
+          "pass": false,
+          "fail": true,
+          "pending": false,
+          "context": "[\n  {\n    \"title\": \"cypress-mochawesome-reporter-videos-failed\",\n    \"value\": \"cypress\\\\e2e\\\\sub-dir\\\\test1.cy.js\"\n  },\n  {\n    \"title\": \"cypress-mochawesome-reporter-screenshots\",\n    \"value\": [\n      [\n        \"\\\\sub-dir\\\\test1.cy.js\\\\custom-name.png\",\n        \"\\\\sub-dir\\\\test1.cy.js\\\\fail test #tag1 (failed).png\"\n      ],\n      [\n        \"\\\\sub-dir\\\\test1.cy.js\\\\custom-name (attempt 2).png\",\n        \"\\\\sub-dir\\\\test1.cy.js\\\\fail test #tag1 (failed) (attempt 2).png\"\n      ]\n    ]\n  }\n]",
+          "code": "cy.visit('site/index.html');\ncy.screenshot('custom-name');\ncy.get('#todo-list li').should('have.length', 10);",
+          "err": {
+            "message": "AssertionError: Timed out retrying after 4000ms: Not enough elements found. Found '4', expected '10'.",
+            "estack": "AssertionError: Timed out retrying after 4000ms: Not enough elements found. Found '4', expected '10'.\n    at Context.eval (webpack://@example/simple/./cypress/e2e/sub-dir/test1.cy.js:6:26)",
+            "diff": "- 4\n+ 10\n"
+          },
+          "uuid": "248b319a-bd64-46fa-9993-de7d5cba6539",
+          "parentUUID": "8fe04c5b-0102-4be5-96c9-1b829ad6b4cf",
+          "isHook": false,
+          "skipped": false
+        }
+      ],
+      "suites": [
+        {
+          "uuid": "d1da0427-7e9c-4823-9ac8-2e645496ce88",
+          "title": "Test 1 #tag2",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "default todos exists",
+              "fullTitle": "Test 1 #tag2 default todos exists",
+              "timedOut": null,
+              "duration": 359,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "[\n  {\n    \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n    \"value\": \"cypress\\\\e2e\\\\sub-dir\\\\test1.cy.js\"\n  },\n  {\n    \"title\": \"cypress-mochawesome-reporter-screenshots\",\n    \"value\": [\n      [\n        \"\\\\sub-dir\\\\test1.cy.js\\\\Test 1 #tag2 -- default todos exists.png\"\n      ]\n    ]\n  }\n]",
+              "code": "cy.visit('site/index.html');\ncy.get('#todo-list li').should('have.length', 4);\ncy.screenshot();",
+              "err": {},
+              "uuid": "a62d3919-c83c-46b6-b157-02bfb93bc9c7",
+              "parentUUID": "d1da0427-7e9c-4823-9ac8-2e645496ce88",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [
+            {
+              "uuid": "0fffe31a-1aec-4486-bc14-7f29a3d7fcfd",
+              "title": "hierarchy",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "fail test hierarchy #tag3",
+                  "fullTitle": "Test 1 #tag2 hierarchy fail test hierarchy #tag3",
+                  "timedOut": null,
+                  "duration": 4675,
+                  "state": "failed",
+                  "speed": null,
+                  "pass": false,
+                  "fail": true,
+                  "pending": false,
+                  "context": "[\n  {\n    \"title\": \"cypress-mochawesome-reporter-videos-failed\",\n    \"value\": \"cypress\\\\e2e\\\\sub-dir\\\\test1.cy.js\"\n  },\n  {\n    \"title\": \"cypress-mochawesome-reporter-screenshots\",\n    \"value\": [\n      [\n        \"\\\\sub-dir\\\\test1.cy.js\\\\custom-name2.png\",\n        \"\\\\sub-dir\\\\test1.cy.js\\\\Test 1 #tag2 -- hierarchy -- fail test hierarchy #tag3 (failed).png\"\n      ],\n      [\n        \"\\\\sub-dir\\\\test1.cy.js\\\\custom-name2 (attempt 2).png\",\n        \"\\\\sub-dir\\\\test1.cy.js\\\\Test 1 #tag2 -- hierarchy -- fail test hierarchy #tag3 (failed) (attempt 2).png\"\n      ]\n    ]\n  }\n]",
+                  "code": "cy.visit('site/index.html');\ncy.screenshot('custom-name2');\ncy.get('#todo-list li').should('have.length', 10);",
+                  "err": {
+                    "message": "AssertionError: Timed out retrying after 4000ms: Not enough elements found. Found '4', expected '10'.",
+                    "estack": "AssertionError: Timed out retrying after 4000ms: Not enough elements found. Found '4', expected '10'.\n    at Context.eval (webpack://@example/simple/./cypress/e2e/sub-dir/test1.cy.js:24:30)",
+                    "diff": "- 4\n+ 10\n"
+                  },
+                  "uuid": "933fa4ed-1f41-43b3-ab61-4d2b6f96836f",
+                  "parentUUID": "0fffe31a-1aec-4486-bc14-7f29a3d7fcfd",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [],
+              "failures": [
+                "933fa4ed-1f41-43b3-ab61-4d2b6f96836f"
+              ],
+              "pending": [],
+              "skipped": [],
+              "duration": 4675,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            }
+          ],
+          "passes": [
+            "a62d3919-c83c-46b6-b157-02bfb93bc9c7"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 359,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [
+        "248b319a-bd64-46fa-9993-de7d5cba6539"
+      ],
+      "pending": [],
+      "skipped": [],
+      "duration": 4636,
+      "root": true,
+      "rootEmpty": false,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": null,
+      "version": "6.2.0"
+    }
+  }
+}
