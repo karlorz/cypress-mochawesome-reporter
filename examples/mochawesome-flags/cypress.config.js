@@ -12,7 +12,8 @@ module.exports = defineConfig({
     inlineAssets: true,
     saveAllAttempts: false,
     ignoreVideos: true,
-    videoOnFailOnly: false
+    videoOnFailOnly: false,
+    // saveJson: true,
   },
   e2e: {
     setupNodeEvents(on, config) {
